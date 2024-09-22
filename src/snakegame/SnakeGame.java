@@ -20,6 +20,7 @@ public class SnakeGame extends javax.swing.JFrame {
         add(gamePanel);
         pack();
         initComponents();
+        gamePanel.setFocusable(true);
         
     }
 
@@ -33,7 +34,7 @@ public class SnakeGame extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
+        setTitle("SnakeGame  -  Ghulam Sakhi Sahil");
         setResizable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

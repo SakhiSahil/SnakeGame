@@ -49,6 +49,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
         initializeTryAgainButton(); // Initialize the "Try Again" button
         startGame(); // Start the game
+        setFocusable(true);
     }
 
     public void startGame() {
@@ -78,11 +79,8 @@ public class GamePanel extends JPanel implements ActionListener {
         tryAgainButton.setBounds((BOARD_WIDTH/2)-50, (BOARD_HEIGHT/2)+30, 100, 30); // Set the size and position of the button below the game over message
         tryAgainButton.setFocusable(false); // Disable button focus to avoid interfering with key inputs
         tryAgainButton.setBackground(Color.YELLOW);
-        tryAgainButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                startGame(); // Restart the game when button is clicked
-            }
+        tryAgainButton.addActionListener((ActionEvent e) -> {
+            startGame(); // Restart the game when button is clicked
         });
         setLayout(null); // Use null layout to manually position the button
         add(tryAgainButton); // Add the button to the panel
@@ -117,9 +115,9 @@ public class GamePanel extends JPanel implements ActionListener {
         // Draw snake
         for (int i = 0; i < bodyParts; i++) {
             if (i == 0) {
-                g.setColor(Color.GREEN); // Head of the snake
+                g.setColor(Color.YELLOW); // Head of the snake
             } else {
-                g.setColor(Color.WHITE); // Body of the snake
+                g.setColor(Color.GREEN); // Body of the snake
             }
             g.fillRect(x[i], y[i], TILE_SIZE, TILE_SIZE); // Draw each part of the snake
         }
