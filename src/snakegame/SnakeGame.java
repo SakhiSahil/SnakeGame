@@ -22,6 +22,7 @@ public class SnakeGame extends JFrame {
         pack();
         gamePanel.setFocusable(true);
 
+        setTitle("SnakeGame - Ghulam Sakhi Sahil");
         setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         setSize(615, 638);
         setLayout(null);

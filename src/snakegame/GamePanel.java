@@ -116,13 +116,13 @@ public class GamePanel extends JPanel implements ActionListener {
         Graphics2D g2d = (Graphics2D) g;
 
         // Draw the grid
-        g.setColor(Color.DARK_GRAY);
-        for (int i = 0; i < BOARD_WIDTH; i += TILE_SIZE) {
-            g.drawLine(i, 0, i, BOARD_HEIGHT); // Vertical lines
-        }
-        for (int j = 0; j < BOARD_HEIGHT; j += TILE_SIZE) {
-            g.drawLine(0, j, BOARD_WIDTH, j); // Horizontal lines
-        }
+        //g.setColor(Color.LIGHT_GRAY);
+        //for (int i = 0; i < BOARD_WIDTH; i += TILE_SIZE) {
+       //     g.drawLine(i, 0, i, BOARD_HEIGHT); // Vertical lines
+       // }
+       // for (int j = 0; j < BOARD_HEIGHT; j += TILE_SIZE) {
+        //    g.drawLine(0, j, BOARD_WIDTH, j); // Horizontal lines
+       // }
 
         // Draw the current food image
         g.drawImage(currentFoodImage, foodX, foodY, TILE_SIZE, TILE_SIZE, this);
@@ -147,7 +147,7 @@ public class GamePanel extends JPanel implements ActionListener {
         Font font = new Font("Helvetica", Font.BOLD, 18);
         FontMetrics metrics = getFontMetrics(font);
 
-        g.setColor(Color.RED);
+        g.setColor(Color.YELLOW);
         g.setFont(font);
         g.drawString(gameOverMsg, (getWidth() - metrics.stringWidth(gameOverMsg)) / 2, getHeight() / 2 - 30);
         g.drawString("Score: " + score, (getWidth() - metrics.stringWidth("Score: " + score)) / 2, getHeight() / 2);
